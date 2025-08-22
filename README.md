@@ -107,8 +107,8 @@ TodoMobile, modern mobil uygulama geliştirme teknolojileri kullanılarak geliş
 1. **Repository'yi klonlayın**
 
    ```bash
-   git clone https://github.com/kullaniciadi/to-do-app.git
-   cd to-do-app/TodoMobile
+   git clone https://github.com/rftsngl/To-Do-List-Mobile-Application-.git
+   cd To-Do-List-Mobile-Application-
    ```
 
 2. **Bağımlılıkları yükleyin**
@@ -226,6 +226,7 @@ Uygulama **Clean Architecture** prensipleri takip ederek geliştirilmiştir:
 ### Ana Tablolar
 
 #### Lists Tablosu
+
 ```sql
 CREATE TABLE lists (
   id TEXT PRIMARY KEY,
@@ -240,6 +241,7 @@ CREATE TABLE lists (
 ```
 
 #### Tasks Tablosu
+
 ```sql
 CREATE TABLE tasks (
   id TEXT PRIMARY KEY,
@@ -262,6 +264,7 @@ CREATE TABLE tasks (
 ```
 
 #### Labels Tablosu
+
 ```sql
 CREATE TABLE labels (
   id TEXT PRIMARY KEY,
@@ -276,6 +279,7 @@ CREATE TABLE labels (
 ```
 
 #### Task_Labels İlişki Tablosu
+
 ```sql
 CREATE TABLE task_labels (
   task_id TEXT NOT NULL,
@@ -287,6 +291,7 @@ CREATE TABLE task_labels (
 ```
 
 #### Subtasks Tablosu
+
 ```sql
 CREATE TABLE subtasks (
   id TEXT PRIMARY KEY,
@@ -318,12 +323,14 @@ CREATE INDEX idx_task_labels_label_id ON task_labels(label_id);
 ### Veri Tipleri
 
 #### TaskStatus Enum
+
 - `todo`: Yapılacak
 - `in_progress`: İşlemde
 - `blocked`: Engellendi
 - `done`: Tamamlandı
 
 #### TaskPriority Seviyeleri
+
 - `0`: Düşük öncelik
 - `1`: Normal öncelik
 - `2`: Yüksek öncelik
@@ -465,7 +472,7 @@ Bug raporu veya feature request için GitHub Issues kullanın:
 
 Bu proje MIT Lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasını inceleyin.
 
-```
+```text
 MIT License
 
 Copyright (c) 2025 Rıfat Sinanoğlu
@@ -492,9 +499,9 @@ SOFTWARE.
 ## 📞 İletişim
 
 - **Geliştirici**: Rıfat Sinanoğlu
-- **Email**: [email@example.com](mailto:email@example.com)
-- **GitHub**: [@username](https://github.com/username)
-- **LinkedIn**: [linkedin.com/in/username](https://linkedin.com/in/username)
+- **Email**: [rifat@example.com](mailto:rifat@example.com)
+- **GitHub**: [@rftsngl](https://github.com/rftsngl)
+- **LinkedIn**: [linkedin.com/in/rftsngl](https://linkedin.com/in/rftsngl)
 
 ---
 
