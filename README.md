@@ -7,17 +7,17 @@
 
 ## 📋 İçindekiler
 
-- [Genel Bakış](#genel-bakış)
-- [Özellikler](#özellikler)
-- [Teknoloji Stack](#teknoloji-stack)
-- [Kurulum](#kurulum)
-- [Proje Yapısı](#proje-yapısı)
-- [Veritabanı Şeması](#veritabanı-şeması)
-- [Ekran Görüntüleri](#ekran-görüntüleri)
-- [API Referansı](#api-referansı)
-- [Geliştirme](#geliştirme)
-- [Katkıda Bulunma](#katkıda-bulunma)
-- [Lisans](#lisans)
+- [Genel Bakış](#-genel-bakış)
+- [Özellikler](#-özellikler)
+- [Teknoloji Stack](#️-teknoloji-stack)
+- [Kurulum](#-kurulum)
+- [Proje Yapısı](#-proje-yapısı)
+- [Veritabanı Şeması](#️-veritabanı-şeması)
+- [Ekran Görüntüleri](#-ekran-görüntüleri)
+- [API Referansı](#-api-referansı)
+- [Geliştirme](#-geliştirme)
+- [Katkıda Bulunma](#-katkıda-bulunma)
+- [Lisans](#-lisans)
 
 ## 🚀 Genel Bakış
 
