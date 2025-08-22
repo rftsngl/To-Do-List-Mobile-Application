@@ -1,4 +1,4 @@
-# TodoMobile - Gelişmiş Görev Yönetim Uygulaması
+# TodoMobile - Görev Yönetim Uygulaması
 
 [![React Native](https://img.shields.io/badge/React%20Native-0.81.0-blue.svg)](https://reactnative.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue.svg)](https://www.typescriptlang.org/)
@@ -499,12 +499,9 @@ SOFTWARE.
 ## 📞 İletişim
 
 - **Geliştirici**: Rıfat Sinanoğlu
-- **Email**: [rifat@example.com](mailto:rifat@example.com)
 - **GitHub**: [@rftsngl](https://github.com/rftsngl)
 - **LinkedIn**: [linkedin.com/in/rftsngl](https://linkedin.com/in/rftsngl)
 
 ---
 
 **⭐ Bu projeyi beğendiyseniz yıldız vermeyi unutmayın!**
-
-**Herhangi bir sorunuz olursa issue açmaktan çekinmeyin.**
