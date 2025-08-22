@@ -1,4 +1,4 @@
-package com.todomobile
+package com.rftsnngl.to_do_mobile
 
 import android.app.Application
 import com.facebook.react.PackageList

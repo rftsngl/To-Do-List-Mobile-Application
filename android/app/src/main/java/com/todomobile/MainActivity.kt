@@ -1,4 +1,4 @@
-package com.todomobile
+package com.rftsnngl.to_do_mobile
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
