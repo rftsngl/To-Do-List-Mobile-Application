@@ -1,5 +1,7 @@
 # TodoMobile - React Native To-Do Uygulaması
 
+React Native kullanarak geliştirdiğim mobil uygulama projesi. Proje yapısı, component düzeni ve ölçeklenebilir mimariyi öğrenmek ve denemek için tasarlandı.
+
 Bu, [`@react-native-community/cli`](https://github.com/react-native-community/cli) kullanılarak oluşturulmuş yeni bir [**React Native**](https://reactnative.dev) projesidir.
 
 ## Başlangıç
