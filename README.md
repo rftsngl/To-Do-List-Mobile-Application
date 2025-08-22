@@ -1,366 +1,503 @@
-# TodoMobile - React Native To-Do Uygulaması
+# TodoMobile - Gelişmiş Görev Yönetim Uygulaması
 
-React Native kullanarak geliştirdiğim mobil uygulama projesi. Proje yapısı, component düzeni ve ölçeklenebilir mimariyi öğrenmek ve denemek için tasarlandı.
+[![React Native](https://img.shields.io/badge/React%20Native-0.81.0-blue.svg)](https://reactnative.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue.svg)](https://www.typescriptlang.org/)
+[![SQLite](https://img.shields.io/badge/SQLite-react--native--sqlite--storage-green.svg)](https://www.npmjs.com/package/react-native-sqlite-storage)
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Bu, [`@react-native-community/cli`](https://github.com/react-native-community/cli) kullanılarak oluşturulmuş yeni bir [**React Native**](https://reactnative.dev) projesidir.
+## 📋 İçindekiler
 
-## Başlangıç
+- [Genel Bakış](#genel-bakış)
+- [Özellikler](#özellikler)
+- [Teknoloji Stack](#teknoloji-stack)
+- [Kurulum](#kurulum)
+- [Proje Yapısı](#proje-yapısı)
+- [Veritabanı Şeması](#veritabanı-şeması)
+- [Ekran Görüntüleri](#ekran-görüntüleri)
+- [API Referansı](#api-referansı)
+- [Geliştirme](#geliştirme)
+- [Katkıda Bulunma](#katkıda-bulunma)
+- [Lisans](#lisans)
 
-> **Not**: Devam etmeden önce [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) rehberini tamamladığınızdan emin olun.
+## 🚀 Genel Bakış
 
-### Adım 1: Metro'yu Başlatın
+TodoMobile, modern mobil uygulama geliştirme teknolojileri kullanılarak geliştirilmiş, tam özellikli bir görev yönetim uygulamasıdır. Uygulama, kullanıcıların görevlerini organize etmelerine, önceliklendirmelerine ve takip etmelerine olanak tanır.
 
-**Metro**'yu çalıştırmanız gerekiyor - React Native'in JavaScript build aracı.
+### Temel Hedefler
 
-Metro dev server'ı başlatmak için, React Native projenizin kök dizininden şu komutu çalıştırın:
+- ✨ Modern ve sezgisel kullanıcı arayüzü
+- 📱 Cross-platform mobil deneyim (iOS & Android)
+- 🗃️ Yerel veri depolama ve offline çalışma
+- ⚡ Yüksek performans ve akıcı kullanım
+- 🛠️ Genişletilebilir ve sürdürülebilir kod yapısı
 
-```sh
-# Using npm
-npm start
+## 🌟 Özellikler
 
-# OR using Yarn
-yarn start
-```
+### Görev Yönetimi
 
-### Adım 2: Uygulamanızı Derleyin ve Çalıştırın
+- **Görev Oluşturma**: Başlık, açıklama, öncelik ve tarih bilgileri
+- **Durum Takibi**: Todo, İşlemde, Engellendi, Tamamlandı durumları
+- **Öncelik Seviyeleri**: Düşük, Normal, Yüksek, Kritik (0-3)
+- **Alt Görevler**: Görevleri daha küçük parçalara bölme
+- **Tarih Yönetimi**: Başlangıç ve bitiş tarihleri
 
-Metro çalışırken, React Native projenizin kök dizininden yeni bir terminal penceresi açın ve Android veya iOS uygulamanızı derlemek ve çalıştırmak için aşağıdaki komutlardan birini kullanın:
+### Organizasyon
 
-### Android
+- **Liste Yönetimi**: Görevleri kategorilere ayırma
+- **Etiket Sistemi**: Görevlere çoklu etiket atama
+- **Renk Kodlama**: Liste ve etiketler için renk desteği
+- **Sıralama**: Manuel sıralama ve otomatik sıralama seçenekleri
 
-```sh
-# Using npm
-npm run android
+### Kullanıcı Deneyimi
 
-# OR using Yarn
-yarn android
-```
+- **Tab Navigasyon**: Görevler ve Ayarlar sekmeleri
+- **Modal Ekranlar**: Görev detayları ve yeni görev oluşturma
+- **Tema Desteği**: Açık ve koyu tema seçenekleri
+- **Duyarlı Tasarım**: Farklı ekran boyutlarına uyum
 
-### iOS
+### Teknik Özellikler
 
-iOS için CocoaPods bağımlılıklarını yüklemeyi unutmayın (bu sadece ilk klonlamada veya native bağımlılıkları güncelledikten sonra çalıştırılması gerekir).
+- **Offline Çalışma**: İnternet bağlantısı olmadan tam işlevsellik
+- **Veri Senkronizasyonu**: Gelecekte online senkronizasyon desteği
+- **Performans Optimizasyonu**: Lazy loading ve verimli render
+- **Hata Yönetimi**: Kapsamlı hata yakalama ve raporlama
 
-Yeni bir proje oluştururken ilk kez, CocoaPods'u yüklemek için Ruby bundler'ı çalıştırın:
+## 🛠️ Teknoloji Stack
 
-```sh
-bundle install
-```
+### Frontend
 
-Sonra, ve native bağımlılıklarınızı her güncellediğinizde şunu çalıştırın:
+- **React Native** 0.81.0 - Cross-platform mobil uygulama framework'ü
+- **TypeScript** 5.8.3 - Type-safe JavaScript geliştirme
+- **React** 19.1.0 - Kullanıcı arayüzü kütüphanesi
 
-```sh
-bundle exec pod install
-```
+### Veritabanı
 
-Daha fazla bilgi için [CocoaPods Getting Started rehberini](https://guides.cocoapods.org/using/getting-started.html) ziyaret edin.
+- **SQLite** - Yerel veri depolama
+- **react-native-sqlite-storage** 6.0.1 - SQLite entegrasyonu
 
-```sh
-# Using npm
-npm run ios
+### Navigasyon ve UI
 
-# OR using Yarn
-yarn ios
-```
+- **Custom Navigation** - Özel geliştirilmiş navigasyon sistemi
+- **react-native-safe-area-context** - Güvenli alan yönetimi
+- **Custom Components** - Özel UI bileşenleri
 
-Her şey doğru şekilde kurulmuşsa, yeni uygulamanızın Android Emulator, iOS Simulator veya bağlı cihazınızda çalıştığını görmeniz gerekir.
+### Geliştirme Araçları
 
-Bu uygulamanızı çalıştırmanın bir yoludur — ayrıca doğrudan Android Studio veya Xcode'dan da derleyebilirsiniz.
+- **ESLint** - Kod kalitesi analizi
+- **Prettier** - Kod formatlaması
+- **Jest** - Unit testing framework'ü
+- **Metro** - React Native bundler
 
-## Adım 3: Uygulamanızı Düzenleyin
+### Platform Desteği
 
-Artık uygulamayı başarıyla çalıştırdığınıza göre, değişiklikler yapalım!
+- **Android** - Minimum SDK 21 (Android 5.0)
+- **iOS** - Minimum iOS 11.0
 
-`App.tsx` dosyasını tercih ettiğiniz metin editöründe açın ve bazı değişiklikler yapın. Kaydettiğinizde, uygulamanız otomatik olarak güncellenecek ve bu değişiklikleri yansıtacaktır — bu [Fast Refresh](https://reactnative.dev/docs/fast-refresh) ile desteklenmektedir.
+## 📦 Kurulum
 
-Uygulamanızın durumunu sıfırlamak gibi zorla yeniden yüklemek istediğinizde, tam bir yeniden yükleme gerçekleştirebilirsiniz:
+### Gereksinimler
 
-- **Android**: `R` tuşuna iki kez basın veya **Dev Menu**'den **"Reload"** seçeneğini seçin, `Ctrl + M` (Windows/Linux) veya `Cmd ⌘ + M` (macOS) ile erişilebilir.
-- **iOS**: iOS Simulator'da `R` tuşuna basın.
+- Node.js 18.0 veya üzeri
+- React Native CLI
+- Android Studio (Android geliştirme için)
+- Xcode (iOS geliştirme için)
 
-## Tebrikler! :tada:
+### Adım Adım Kurulum
 
-React Native Uygulamanızı başarıyla çalıştırdınız ve değiştirdiniz. :partying_face:
+1. **Repository'yi klonlayın**
 
-### Şimdi Ne Yapmalı?
+   ```bash
+   git clone https://github.com/kullaniciadi/to-do-app.git
+   cd to-do-app/TodoMobile
+   ```
 
-- Bu yeni React Native kodunu mevcut bir uygulamaya eklemek istiyorsanız, [Integration rehberini](https://reactnative.dev/docs/integration-with-existing-apps) inceleyin.
-- React Native hakkında daha fazla bilgi edinmek istiyorsanız, [dökümanları](https://reactnative.dev/docs/getting-started) inceleyin.
+2. **Bağımlılıkları yükleyin**
 
-## Sorun Giderme
+   ```bash
+   npm install
+   ```
 
-Yukarıdaki adımları uygularken sorun yaşıyorsanız, [Troubleshooting](https://reactnative.dev/docs/troubleshooting) sayfasına bakın.
+3. **iOS için ek kurulum** (macOS üzerinde)
 
-## SQLite Veri Katmanı
+   ```bash
+   cd ios && pod install && cd ..
+   ```
 
-Bu proje, React Native için SQLite tabanlı yerel veri katmanı içerir. Gelecekte senkronizasyon özellikli çok kullanıcılı sisteme geçiş için hazırlıklı olarak tasarlanmıştır.
+4. **Geliştirme sunucusunu başlatın**
 
-## Kurulum
+   ```bash
+   npm start
+   ```
 
-### 1. Bağımlılıkları Yükle
+5. **Uygulamayı çalıştırın**
+
+   Android için:
+
+   ```bash
+   npm run android
+   ```
+
+   iOS için:
+
+   ```bash
+   npm run ios
+   ```
+
+### Paketleme
+
+**Android APK oluşturma:**
 
 ```bash
-# TodoMobile dizininde
-npm install
-
-# iOS için CocoaPods
-cd ios && pod install && cd ..
+cd android
+./gradlew assembleRelease
 ```
 
-### 2. Uygulama Başlangıcında Veritabanını Başlat
+**iOS uygulaması oluşturma:**
 
-```typescript
-import { DatabaseManager, runMigrations, seedDatabase } from './src/database';
-
-// App.tsx veya ana component'te
-useEffect(() => {
-  const initDatabase = async () => {
-    try {
-      await DatabaseManager.init();
-      console.log('✅ Veritabanı hazır');
-      
-      // Geliştirme için test verisi (opsiyonel)
-      // await seedDatabase();
-    } catch (error) {
-      console.error('❌ Veritabanı hatası:', error);
-    }
-  };
-
-  initDatabase();
-}, []);
+```bash
+npx react-native run-ios --configuration Release
 ```
 
-## Kullanım Örnekleri
+## 📁 Proje Yapısı
 
-### Liste İşlemleri
-
-```typescript
-import { ListsRepository } from './src/database';
-
-// Yeni liste oluştur
-const newList = ListsRepository.create({
-  name: 'Alışveriş Listesi',
-  color: '#3B82F6'
-});
-
-// Tüm listeleri getir
-const lists = ListsRepository.getAll();
-
-// Liste güncelle
-const updatedList = ListsRepository.update(newList.id, {
-  name: 'Güncellenmiş Liste'
-});
-
-// Liste sil (soft delete)
-ListsRepository.delete(newList.id);
+```text
+TodoMobile/
+├── android/                 # Android native kodu
+├── ios/                    # iOS native kodu
+├── app/                    # Ana uygulama kodu
+│   ├── boot/              # Uygulama başlatma
+│   │   └── InitGate.tsx   # Veritabanı başlatma
+│   ├── components/        # Yeniden kullanılabilir bileşenler
+│   │   ├── FAB.tsx       # Floating Action Button
+│   │   ├── ListItem.tsx  # Liste öğesi bileşeni
+│   │   ├── SegmentedControl.tsx
+│   │   └── Sheet.tsx     # Modal sheet bileşeni
+│   ├── navigation/        # Navigasyon sistemi
+│   │   ├── Stack.tsx     # Stack navigator
+│   │   └── Tabs.tsx      # Tab navigator
+│   ├── screens/           # Uygulama ekranları
+│   │   ├── Tasks/        # Görev ekranları
+│   │   │   ├── components/
+│   │   │   │   └── SubtasksPanel.tsx
+│   │   │   ├── NewTaskSheet.tsx
+│   │   │   ├── TaskDetailScreen.tsx
+│   │   │   └── TasksScreen.tsx
+│   │   ├── Settings/     # Ayar ekranları
+│   │   │   ├── ManageLabelsScreen.tsx
+│   │   │   ├── ManageListsScreen.tsx
+│   │   │   └── SettingsScreen.tsx
+│   │   └── DBCheckScreen.tsx
+│   ├── theme/            # Tema ve stil tanımları
+│   │   └── theme.ts
+│   └── utils/            # Yardımcı fonksiyonlar
+│       ├── date.ts       # Tarih işlemleri
+│       └── status.ts     # Durum yönetimi
+├── src/                  # Veri katmanı
+│   └── database/         # Veritabanı yönetimi
+│       ├── db.ts         # Veritabanı manager
+│       ├── id.ts         # ID generation
+│       ├── index.ts      # Dışa aktarma
+│       ├── migrations.ts # Veritabanı migrationları
+│       ├── repositories/ # Veri erişim katmanı
+│       │   ├── labels.ts
+│       │   ├── lists.ts
+│       │   ├── subtasks.ts
+│       │   └── tasks.ts
+│       ├── seed.ts       # Test verisi
+│       └── types.ts      # TypeScript tipleri
+├── __tests__/            # Test dosyaları
+├── node_modules/         # Bağımlılıklar
+├── App.tsx              # Ana uygulama bileşeni
+├── index.js             # Uygulama giriş noktası
+├── package.json         # Proje yapılandırması
+└── README.md            # Proje dokümantasyonu
 ```
 
-### Görev İşlemleri
+### Mimari Yaklaşım
+
+Uygulama **Clean Architecture** prensipleri takip ederek geliştirilmiştir:
+
+- **Presentation Layer** (`app/`): UI bileşenleri ve ekranlar
+- **Business Logic Layer** (`src/repositories/`): İş mantığı ve veri işlemleri
+- **Data Layer** (`src/database/`): Veri erişimi ve depolama
+
+## 🗄️ Veritabanı Şeması
+
+### Ana Tablolar
+
+#### Lists Tablosu
+```sql
+CREATE TABLE lists (
+  id TEXT PRIMARY KEY,
+  name TEXT NOT NULL,
+  color TEXT,
+  created_at INTEGER NOT NULL,
+  updated_at INTEGER NOT NULL,
+  deleted_at INTEGER,
+  version INTEGER NOT NULL DEFAULT 1,
+  dirty INTEGER NOT NULL DEFAULT 0
+);
+```
+
+#### Tasks Tablosu
+```sql
+CREATE TABLE tasks (
+  id TEXT PRIMARY KEY,
+  list_id TEXT NOT NULL,
+  title TEXT NOT NULL,
+  description TEXT,
+  status TEXT NOT NULL CHECK (status IN ('todo', 'in_progress', 'blocked', 'done')),
+  priority INTEGER NOT NULL CHECK (priority IN (0, 1, 2, 3)),
+  start_date INTEGER,
+  due_date INTEGER,
+  completed_at INTEGER,
+  created_at INTEGER NOT NULL,
+  updated_at INTEGER NOT NULL,
+  deleted_at INTEGER,
+  version INTEGER NOT NULL DEFAULT 1,
+  dirty INTEGER NOT NULL DEFAULT 0,
+  sort_order INTEGER,
+  FOREIGN KEY (list_id) REFERENCES lists(id)
+);
+```
+
+#### Labels Tablosu
+```sql
+CREATE TABLE labels (
+  id TEXT PRIMARY KEY,
+  name TEXT NOT NULL UNIQUE,
+  color TEXT,
+  created_at INTEGER NOT NULL,
+  updated_at INTEGER NOT NULL,
+  deleted_at INTEGER,
+  version INTEGER NOT NULL DEFAULT 1,
+  dirty INTEGER NOT NULL DEFAULT 0
+);
+```
+
+#### Task_Labels İlişki Tablosu
+```sql
+CREATE TABLE task_labels (
+  task_id TEXT NOT NULL,
+  label_id TEXT NOT NULL,
+  PRIMARY KEY (task_id, label_id),
+  FOREIGN KEY (task_id) REFERENCES tasks(id) ON DELETE CASCADE,
+  FOREIGN KEY (label_id) REFERENCES labels(id) ON DELETE CASCADE
+);
+```
+
+#### Subtasks Tablosu
+```sql
+CREATE TABLE subtasks (
+  id TEXT PRIMARY KEY,
+  task_id TEXT NOT NULL,
+  title TEXT NOT NULL,
+  done INTEGER NOT NULL DEFAULT 0,
+  sort_order INTEGER,
+  created_at INTEGER NOT NULL,
+  updated_at INTEGER NOT NULL,
+  deleted_at INTEGER,
+  version INTEGER NOT NULL DEFAULT 1,
+  dirty INTEGER NOT NULL DEFAULT 0,
+  FOREIGN KEY (task_id) REFERENCES tasks(id) ON DELETE CASCADE
+);
+```
+
+### İndeksler ve Optimizasyonlar
+
+```sql
+-- Performans için önemli indeksler
+CREATE INDEX idx_tasks_list_id ON tasks(list_id);
+CREATE INDEX idx_tasks_status ON tasks(status);
+CREATE INDEX idx_tasks_due_date ON tasks(due_date);
+CREATE INDEX idx_subtasks_task_id ON subtasks(task_id);
+CREATE INDEX idx_task_labels_task_id ON task_labels(task_id);
+CREATE INDEX idx_task_labels_label_id ON task_labels(label_id);
+```
+
+### Veri Tipleri
+
+#### TaskStatus Enum
+- `todo`: Yapılacak
+- `in_progress`: İşlemde
+- `blocked`: Engellendi
+- `done`: Tamamlandı
+
+#### TaskPriority Seviyeleri
+- `0`: Düşük öncelik
+- `1`: Normal öncelik
+- `2`: Yüksek öncelik
+- `3`: Kritik öncelik
+
+## 📸 Ekran Görüntüleri
+
+> **Not**: Ekran görüntüleri ekleme sürecindedir.
+
+| Ana Ekran | Görev Detayı | Ayarlar |
+|-----------|--------------|---------|
+| Coming Soon | Coming Soon | Coming Soon |
+
+## 📚 API Referansı
+
+### Task Repository
+
+#### Görev İşlemleri
 
 ```typescript
-import { TasksRepository } from './src/database';
+// Tüm görevleri getir
+const tasks = await TaskRepository.getAll();
+
+// ID ile görev getir
+const task = await TaskRepository.getById('task-id');
 
 // Yeni görev oluştur
-const task = TasksRepository.create({
-  list_id: 'liste-uuid',
-  title: 'Önemli görev',
-  description: 'Detaylı açıklama',
+const newTask = await TaskRepository.create({
+  title: 'Yeni Görev',
+  listId: 'list-id',
   status: 'todo',
-  priority: 2,
-  due_date: Date.now() + (24 * 60 * 60 * 1000) // 1 gün sonra
+  priority: 1
 });
 
-// Listeye göre görevleri getir (otomatik sıralama)
-const listTasks = TasksRepository.getByList('liste-uuid');
-
-// Status'a göre filtrele
-const todoTasks = TasksRepository.getByStatus('liste-uuid', 'todo');
-
-// Ajanda (tarih aralığı)
-const agendaTasks = TasksRepository.getAgenda({
-  start: Date.now(),
-  end: Date.now() + (7 * 24 * 60 * 60 * 1000) // 1 hafta
+// Görev güncelle
+await TaskRepository.update('task-id', {
+  title: 'Güncellenmiş Görev',
+  status: 'done'
 });
 
-// Vadesi geçmiş görevler
-const overdueTasks = TasksRepository.getOverdue();
-
-// Görevi tamamla
-const completedTask = TasksRepository.markDone(task.id);
+// Görev sil
+await TaskRepository.delete('task-id');
 ```
 
-### Etiket İşlemleri
+### List Repository
 
 ```typescript
-import { LabelsRepository } from './src/database';
+// Liste oluştur
+const list = await ListRepository.create({
+  name: 'İş Görevleri',
+  color: '#FF5722'
+});
 
+// Listeye göre görevleri getir
+const tasks = await TaskRepository.getByListId('list-id');
+```
+
+### Label Repository
+
+```typescript
 // Etiket oluştur
-const label = LabelsRepository.create({
+const label = await LabelRepository.create({
   name: 'Acil',
-  color: '#EF4444'
+  color: '#F44336'
 });
 
-// Göreve etiket ekle
-LabelsRepository.addToTask('görev-uuid', label.id);
-
-// Görevin etiketlerini getir
-const taskLabels = LabelsRepository.getByTask('görev-uuid');
-
-// Etikete göre görevleri getir
-const urgentTasks = TasksRepository.getByLabel(label.id);
+// Göreve etiket ata
+await TaskRepository.addLabel('task-id', 'label-id');
 ```
 
-### Alt Görev İşlemleri
+## 🔧 Geliştirme
 
-```typescript
-import { SubtasksRepository } from './src/database';
+### Kod Kalitesi
 
-// Alt görev oluştur
-const subtask = SubtasksRepository.create({
-  task_id: 'görev-uuid',
-  title: 'Alt görev başlığı',
-  sort_order: 1
-});
+```bash
+# Linting
+npm run lint
 
-// Alt görevi tamamla/geri al
-const toggledSubtask = SubtasksRepository.toggleDone(subtask.id);
+# Formatting
+npx prettier --write .
 
-// Görevin alt görevlerini getir
-const subtasks = SubtasksRepository.getByTask('görev-uuid');
-
-// Alt görev istatistikleri
-const stats = SubtasksRepository.getTaskStats('görev-uuid');
-// { total: 5, completed: 3, pending: 2, completionRate: 60 }
+# Type checking
+npx tsc --noEmit
 ```
 
-## Veri Sıralaması
+### Testing
 
-Görevler varsayılan olarak şu sıraya göre listelenir:
+```bash
+# Unit testleri çalıştır
+npm test
 
-1. **Status Önceliği**: todo → in_progress → blocked → done
-2. **Priority**: 3 (kritik) → 2 (yüksek) → 1 (normal) → 0 (düşük)  
-3. **Due Date**: En yakın tarih üstte (NULLS LAST)
-4. **Updated**: En son güncellenen üstte
-
-### Manuel Sıralama
-
-İleride manuel sıralama ihtiyacı çıkarsa:
-
-```typescript
-// Görevin sırasını güncelle
-TasksRepository.updateSortOrder('görev-uuid', 1.5);
-
-// Manuel sıralama ile getir
-const customOrderTasks = TasksRepository.getByListWithCustomOrder('liste-uuid');
+# Test coverage
+npm test -- --coverage
 ```
 
-Manuel sıralama aktif olduğunda, `sort_order` değeri olan görevler önce gelir, sonra varsayılan sıralama uygulanır.
+### Debugging
 
-## Senkronizasyon Hazırlığı
+1. **React Native Debugger** kullanın
+2. **Console logging** için `console.log()` ekleyin
+3. **Database debugging** için DB Check ekranını kullanın
 
-Her kayıt senkronizasyon için hazır alanlar içerir:
+### Environment Configuration
 
-- **`dirty`**: 0 = temiz, 1 = senkron bekliyor
-- **`version`**: Her güncelleme ile artırılır
-- **`deleted_at`**: Soft delete timestamp'i
+Geliştirme ortamı için `.env` dosyası oluşturun:
 
-### Kirli Kayıtları Alma
-
-```typescript
-// Senkron bekleyen kayıtları getir
-const dirtyLists = ListsRepository.getDirty();
-const dirtyTasks = TasksRepository.getDirty();
-const dirtyLabels = LabelsRepository.getDirty();
-
-// Senkron sonrası temizle
-ListsRepository.markClean('liste-uuid', newVersion);
+```env
+NODE_ENV=development
+DEBUG=true
 ```
 
-### Senkron Senaryosu (Gelecek)
+## 🤝 Katkıda Bulunma
 
-1. Kirli kayıtları topla (`getDirty()`)
-2. Server'a gönder
-3. Server response'ında yeni version'ları al
-4. `markClean(id, newVersion)` ile temizle
+### Katkı Süreci
 
-## Test ve Geliştirme
+1. Bu repository'yi fork edin
+2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
+3. Değişikliklerinizi commit edin (`git commit -m 'Add some amazing feature'`)
+4. Branch'inizi push edin (`git push origin feature/amazing-feature`)
+5. Pull Request oluşturun
 
-### Test Verisi Oluşturma
+### Kod Standartları
 
-```typescript
-import { seedDatabase, smokeTest, quickTest } from './src/database';
+- **TypeScript** kullanın
+- **ESLint** kurallarına uyun
+- **Prettier** ile kodu formatlayın
+- Değişiklikler için **test** yazın
+- **Meaningful commit messages** kullanın
 
-// Test verisi oluştur
-await seedDatabase();
+### İssue Raporlama
 
-// Duman testi çalıştır
-await smokeTest();
+Bug raporu veya feature request için GitHub Issues kullanın:
 
-// Hızlı test (init + seed + smoke)
-await quickTest();
+1. Detaylı açıklama yapın
+2. Reproduction steps ekleyin
+3. Platform bilgilerini belirtin
+4. Ekran görüntüsü ekleyin (gerekiyorsa)
+
+## 📄 Lisans
+
+Bu proje MIT Lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasını inceleyin.
+
+```
+MIT License
+
+Copyright (c) 2025 Rıfat Sinanoğlu
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 ```
 
-### Veritabanı Sıfırlama
+## 📞 İletişim
 
-```typescript
-import { DatabaseManager, resetAndSeed } from './src/database';
+- **Geliştirici**: Rıfat Sinanoğlu
+- **Email**: [email@example.com](mailto:email@example.com)
+- **GitHub**: [@username](https://github.com/username)
+- **LinkedIn**: [linkedin.com/in/username](https://linkedin.com/in/username)
 
-// Geliştirme için veritabanını sıfırla
-await DatabaseManager.reset();
+---
 
-// Sıfırla ve test verisi ekle
-await resetAndSeed();
-```
+**⭐ Bu projeyi beğendiyseniz yıldız vermeyi unutmayın!**
 
-### Migration İşlemleri
-
-```typescript
-import { getCurrentVersion, rollbackTo } from './src/database';
-
-// Mevcut version'ı kontrol et
-const version = await getCurrentVersion(DatabaseManager.getDB());
-
-// Geliştirme için rollback (dikkatli kullanın!)
-await rollbackTo(DatabaseManager.getDB(), 0);
-```
-
-## Veritabanı Yapısı
-
-### Tablolar
-
-- **`lists`**: Görev listeleri
-- **`tasks`**: Görevler
-- **`labels`**: Etiketler  
-- **`task_labels`**: Görev-etiket ilişki tablosu
-- **`subtasks`**: Alt görevler
-- **`schema_migrations`**: Migration sürüm takibi
-
-### İndeksler
-
-Performans için önceden tanımlanmış indeksler:
-
-- Görev listesi + status + priority + due_date
-- Due date sorguları için
-- Etiket ilişkileri için
-- Dirty flag sorguları için
-
-### Trigger'lar
-
-Otomatik timestamp ve sürüm yönetimi için trigger'lar her tabloda aktif.
-
-## Performans Notları
-
-- WAL modu aktif (eş zamanlı okuma/yazma)
-- Foreign key'ler aktif
-- Prepared statement'lar kullanılıyor
-- Transaction destekli toplu işlemler
-- İndeksli sorgular
-
-## Daha Fazla Öğrenin
-
-React Native hakkında daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
-
-- [React Native Website](https://reactnative.dev) - React Native hakkında daha fazla bilgi edinin.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - React Native'e **genel bakış** ve ortamınızı nasıl kuracağınız.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - React Native **temellerinin** **rehberli turu**.
-- [Blog](https://reactnative.dev/blog) - en son resmi React Native **Blog** gönderilerini okuyun.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - React Native için Açık Kaynak GitHub **deposu**.
+**Herhangi bir sorunuz olursa issue açmaktan çekinmeyin.**
