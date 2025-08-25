@@ -24,7 +24,7 @@ import { Header } from '../../navigation/Stack';
 import {
   LabelsRepository,
   type Label,
-} from '../../../src/database';
+} from '../../data';
 
 // Theme
 import { lightTheme } from '../../theme/theme';

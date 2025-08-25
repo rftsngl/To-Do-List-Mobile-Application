@@ -12,7 +12,7 @@ import {
   ActivityIndicator,
   Alert,
 } from 'react-native';
-import { DatabaseManager, seedDatabase, ListsRepository } from '../../src/database';
+import { DatabaseManager, seedDatabase, ListsRepository } from '../data';
 
 interface InitGateProps {
   children: ReactNode;

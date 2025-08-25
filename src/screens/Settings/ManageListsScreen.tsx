@@ -25,7 +25,7 @@ import {
   ListsRepository,
   TasksRepository,
   type List,
-} from '../../../src/database';
+} from '../../data';
 
 // Theme
 import { lightTheme } from '../../theme/theme';

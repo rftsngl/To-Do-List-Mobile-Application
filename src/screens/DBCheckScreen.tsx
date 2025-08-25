@@ -21,7 +21,7 @@ import {
   TasksRepository,
   LabelsRepository,
   SubtasksRepository,
-} from '../../src/database';
+} from '../data';
 
 interface DatabaseStats {
   lists: number;

@@ -15,7 +15,7 @@ import {
   AccessibilityInfo,
 } from 'react-native';
 
-import { SubtasksRepository, type Subtask } from '../../../../src/database';
+import { SubtasksRepository, type Subtask } from '../../../data';
 import { lightTheme } from '../../../theme/theme';
 
 interface SubtasksPanelProps {

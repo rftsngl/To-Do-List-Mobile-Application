@@ -16,7 +16,7 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 // Database (dev tools için)
-import { resetAndSeed, smokeTest } from '../../../src/database';
+import { resetAndSeed, smokeTest } from '../../data';
 
 // Navigation
 import { Navigation } from '../../navigation/Stack';

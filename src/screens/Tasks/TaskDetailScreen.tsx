@@ -30,7 +30,7 @@ import {
   type List,
   type Label,
 
-} from '../../../src/database';
+} from '../../data';
 
 // Utils
 import { formatDateYYYYMMDD, parseDateYYYYMMDD } from '../../utils/date';

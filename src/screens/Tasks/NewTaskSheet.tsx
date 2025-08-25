@@ -24,7 +24,7 @@ import {
   LabelsRepository,
   type List,
   type Label,
-} from '../../../src/database';
+} from '../../data';
 
 // Utils
 import { parseDateYYYYMMDD, formatDateYYYYMMDD, now } from '../../utils/date';

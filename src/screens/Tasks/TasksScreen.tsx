@@ -28,7 +28,7 @@ import {
   LabelsRepository,
   type Task,
   type Label,
-} from '../../../src/database';
+} from '../../data';
 
 // Utils
 import { startOfToday, endOfToday, now } from '../../utils/date';
