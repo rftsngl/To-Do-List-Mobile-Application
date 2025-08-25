@@ -2,9 +2,9 @@
  * Subtasks repository - Alt görev yönetimi
  */
 
-import { DatabaseManager } from '../db';
-import { Subtask } from '../types';
-import { generateId, now } from '../id';
+import { DatabaseManager } from '@database/db';
+import { Subtask } from '@database/types';
+import { generateId, now } from '@database/id';
 
 export class SubtasksRepository {
 

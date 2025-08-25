@@ -11,7 +11,7 @@ import {
   StyleSheet,
   AccessibilityInfo,
 } from 'react-native';
-import { lightTheme } from '../theme/theme';
+import { lightTheme } from '@theme/theme';
 
 // Segment seçenekleri
 export type SegmentOption = 'All' | 'Today' | 'Upcoming' | 'Overdue' | 'Done';

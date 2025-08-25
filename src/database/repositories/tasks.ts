@@ -2,9 +2,9 @@
  * Tasks repository - Görev yönetimi
  */
 
-import { DatabaseManager } from '../db';
-import { Task, TaskStatus, TaskPriority, PagingOptions, AgendaRange, TaskWithLabels } from '../types';
-import { generateId, now } from '../id';
+import { DatabaseManager } from '@database/db';
+import { Task, TaskStatus, TaskPriority, PagingOptions, AgendaRange, TaskWithLabels } from '@database/types';
+import { generateId, now } from '@database/id';
 
 export class TasksRepository {
 

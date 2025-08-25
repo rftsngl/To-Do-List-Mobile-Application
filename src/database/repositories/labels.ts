@@ -2,9 +2,9 @@
  * Labels repository - Etiket yönetimi
  */
 
-import { DatabaseManager } from '../db';
-import { Label, TaskLabel } from '../types';
-import { generateId, now } from '../id';
+import { DatabaseManager } from '@database/db';
+import { Label } from '@database/types';
+import { generateId, now } from '@database/id';
 
 export class LabelsRepository {
   

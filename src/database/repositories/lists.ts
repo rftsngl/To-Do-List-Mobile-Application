@@ -2,9 +2,9 @@
  * Lists repository - Liste yönetimi
  */
 
-import { DatabaseManager } from '../db';
-import { List } from '../types';
-import { generateId, now } from '../id';
+import { DatabaseManager } from '@database/db';
+import { List } from '@database/types';
+import { generateId, now } from '@database/id';
 
 export class ListsRepository {
   

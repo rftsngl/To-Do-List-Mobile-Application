@@ -16,13 +16,13 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 // Database (dev tools için)
-import { resetAndSeed, smokeTest } from '../../../src/database';
+import { resetAndSeed, smokeTest } from '@database';
 
 // Navigation
-import { Navigation } from '../../navigation/Stack';
+import { Navigation } from '@navigation/Stack';
 
 // Theme
-import { lightTheme } from '../../theme/theme';
+import { lightTheme } from '@theme/theme';
 
 interface SettingsScreenProps {
   isDarkMode: boolean;

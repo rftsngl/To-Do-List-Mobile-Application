@@ -17,9 +17,9 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 // Components
-import { SegmentedControl, defaultSegmentOptions, type SegmentOption } from '../../components/SegmentedControl';
-import { FAB } from '../../components/FAB';
-import { ListItem } from '../../components/ListItem';
+import { SegmentedControl, defaultSegmentOptions, type SegmentOption } from '@components/SegmentedControl';
+import { FAB } from '@components/FAB';
+import { ListItem } from '@components/ListItem';
 
 // Database
 import {
@@ -28,14 +28,14 @@ import {
   LabelsRepository,
   type Task,
   type Label,
-} from '../../../src/database';
+} from '@database';
 
 // Utils
-import { startOfToday, endOfToday, now } from '../../utils/date';
-import { isActiveStatus } from '../../utils/status';
+import { startOfToday, endOfToday, now } from '@utils/date';
+import { isActiveStatus } from '@utils/status';
 
 // Theme
-import { lightTheme } from '../../theme/theme';
+import { lightTheme } from '@theme/theme';
 
 interface TasksScreenProps {
   onNewTask: () => void;

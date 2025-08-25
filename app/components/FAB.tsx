@@ -12,7 +12,7 @@ import {
   Animated,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { lightTheme } from '../theme/theme';
+import { lightTheme } from '@theme/theme';
 
 interface FABProps {
   onPress: () => void;

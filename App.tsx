@@ -12,23 +12,23 @@ import {
 } from 'react-native-safe-area-context';
 
 // Uygulama başlangıç kapısı
-import { InitGate } from './app/boot/InitGate';
+import { InitGate } from '@boot/InitGate';
 
 // Navigasyon
-import { StackNavigator, StackGlobalRef, Screen } from './app/navigation/Stack';
-import { TabNavigator, TabScreen } from './app/navigation/Tabs';
+import { StackNavigator, StackGlobalRef, Screen } from '@navigation/Stack';
+import { TabNavigator, TabScreen } from '@navigation/Tabs';
 
 // Ekranlar
-import { TasksScreen } from './app/screens/Tasks/TasksScreen';
-import { NewTaskSheet } from './app/screens/Tasks/NewTaskSheet';
-import { TaskDetailScreen } from './app/screens/Tasks/TaskDetailScreen';
-import { SettingsScreen } from './app/screens/Settings/SettingsScreen';
-import { ManageListsScreen } from './app/screens/Settings/ManageListsScreen';
-import { ManageLabelsScreen } from './app/screens/Settings/ManageLabelsScreen';
-import { DBCheckScreen } from './app/screens/DBCheckScreen';
+import { TasksScreen } from '@screens/Tasks/TasksScreen';
+import { NewTaskSheet } from '@screens/Tasks/NewTaskSheet';
+import { TaskDetailScreen } from '@screens/Tasks/TaskDetailScreen';
+import { SettingsScreen } from '@screens/Settings/SettingsScreen';
+import { ManageListsScreen } from '@screens/Settings/ManageListsScreen';
+import { ManageLabelsScreen } from '@screens/Settings/ManageLabelsScreen';
+import { DBCheckScreen } from '@screens/DBCheckScreen';
 
 // Navigation helper
-import { Navigation } from './app/navigation/Stack';
+import { Navigation } from '@navigation/Stack';
 
 function App() {
   const systemIsDarkMode = useColorScheme() === 'dark';

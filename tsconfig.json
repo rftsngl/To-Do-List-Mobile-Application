@@ -19,6 +19,17 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-native",
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@database/*": ["src/database/*"],
+      "@components/*": ["app/components/*"],
+      "@navigation/*": ["app/navigation/*"],
+      "@theme/*": ["app/theme/*"],
+      "@utils/*": ["app/utils/*"],
+      "@boot/*": ["app/boot/*"],
+      "@screens/*": ["app/screens/*"],
+      "@root/*": ["*"]
+    }
   }
 }

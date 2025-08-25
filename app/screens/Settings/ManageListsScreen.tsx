@@ -18,17 +18,17 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 // Components  
-import { Header } from '../../navigation/Stack';
+import { Header } from '@navigation/Stack';
 
 // Database
 import {
   ListsRepository,
   TasksRepository,
   type List,
-} from '../../../src/database';
+} from '@database';
 
 // Theme
-import { lightTheme } from '../../theme/theme';
+import { lightTheme } from '@theme/theme';
 
 // Renk paleti
 const COLOR_PALETTE = [

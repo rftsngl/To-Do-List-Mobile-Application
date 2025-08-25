@@ -18,7 +18,7 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 // Navigation
-import { Header } from '../../navigation/Stack';
+import { Header } from '@navigation/Stack';
 
 // Database  
 import {
@@ -30,17 +30,17 @@ import {
   type List,
   type Label,
 
-} from '../../../src/database';
+} from '@database';
 
 // Utils
-import { formatDateYYYYMMDD, parseDateYYYYMMDD } from '../../utils/date';
-import { getAllStatuses, getAllPriorities } from '../../utils/status';
+import { formatDateYYYYMMDD, parseDateYYYYMMDD } from '@utils/date';
+import { getAllStatuses, getAllPriorities } from '@utils/status';
 
 // Theme
-import { lightTheme, getPriorityColor, getStatusColor } from '../../theme/theme';
+import { lightTheme, getPriorityColor, getStatusColor } from '@theme/theme';
 
 // Components
-import { SubtasksPanel } from './components/SubtasksPanel';
+import { SubtasksPanel } from '@screens/Tasks/components/SubtasksPanel';
 
 interface TaskDetailScreenProps {
   taskId: string;

@@ -10,10 +10,10 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from 'react-native';
-import { lightTheme, getPriorityColor, getStatusColor } from '../theme/theme';
-import { formatDue, isOverdue, isToday } from '../utils/date';
-import { getStatusEmoji, getPriorityEmoji } from '../utils/status';
-import type { Task } from '../../src/database/types';
+import { lightTheme, getPriorityColor, getStatusColor } from '@theme/theme';
+import { formatDue, isOverdue, isToday } from '@utils/date';
+import { getStatusEmoji, getPriorityEmoji } from '@utils/status';
+import type { Task } from '@database/types';
 
 interface ListItemProps {
   task: Task;

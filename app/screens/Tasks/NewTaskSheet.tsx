@@ -15,7 +15,7 @@ import {
 } from 'react-native';
 
 // Components
-import { SheetWithHeader } from '../../components/Sheet';
+import { SheetWithHeader } from '@components/Sheet';
 
 // Database
 import {
@@ -24,14 +24,14 @@ import {
   LabelsRepository,
   type List,
   type Label,
-} from '../../../src/database';
+} from '@database';
 
 // Utils
-import { parseDateYYYYMMDD, formatDateYYYYMMDD, now } from '../../utils/date';
-import { getAllPriorities } from '../../utils/status';
+import { parseDateYYYYMMDD, formatDateYYYYMMDD, now } from '@utils/date';
+import { getAllPriorities } from '@utils/status';
 
 // Theme
-import { lightTheme, getPriorityColor } from '../../theme/theme';
+import { lightTheme, getPriorityColor } from '@theme/theme';
 
 interface NewTaskSheetProps {
   isVisible: boolean;
