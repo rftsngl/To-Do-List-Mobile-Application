@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TaskFlow App Colors -->
+    <color name="taskflow_primary">#3B82F6</color>
+    <color name="taskflow_primary_dark">#2563EB</color>
+    <color name="taskflow_background">#FFFFFF</color>
+    <color name="taskflow_text">#111827</color>
+</resources>

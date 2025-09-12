@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1D4ED8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="checkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Rounded background -->
+  <rect x="0" y="0" width="512" height="512" rx="90" ry="90" fill="url(#bgGradient)"/>
+  
+  <!-- Shadow effect -->
+  <rect x="8" y="8" width="496" height="496" rx="82" ry="82" fill="rgba(0,0,0,0.1)"/>
+  
+  <!-- Main task list icon -->
+  <rect x="96" y="128" width="320" height="40" rx="8" ry="8" fill="rgba(255,255,255,0.9)"/>
+  <rect x="96" y="192" width="240" height="32" rx="6" ry="6" fill="rgba(255,255,255,0.7)"/>
+  <rect x="96" y="248" width="280" height="32" rx="6" ry="6" fill="rgba(255,255,255,0.7)"/>
+  <rect x="96" y="304" width="200" height="32" rx="6" ry="6" fill="rgba(255,255,255,0.5)"/>
+  
+  <!-- Check marks -->
+  <circle cx="64" cy="148" r="20" fill="url(#checkGradient)"/>
+  <path d="M56 148 L62 154 L72 142" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <circle cx="64" cy="208" r="16" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+  <circle cx="64" cy="264" r="16" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+  <circle cx="64" cy="320" r="16" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+  
+  <!-- TaskFlow logo accent -->
+  <rect x="384" y="384" width="96" height="96" rx="16" ry="16" fill="rgba(255,255,255,0.15)"/>
+  <text x="432" y="440" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="white">TF</text>
+</svg>

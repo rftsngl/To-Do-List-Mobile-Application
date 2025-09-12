@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TaskFlow</string>
+    <string name="app_description">Modern ve kullanıcı dostu görev yönetimi uygulaması v0.0.2</string>
+    <string name="app_version">0.0.2</string>
+</resources>

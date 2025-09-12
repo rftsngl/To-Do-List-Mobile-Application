@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TaskFlow Icon Generator</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; }
+        .icon-preview { display: flex; gap: 20px; flex-wrap: wrap; margin: 20px 0; }
+        .icon-item { text-align: center; }
+        .icon-canvas { border: 1px solid #ddd; border-radius: 8px; margin: 10px 0; }
+        button { background: #3B82F6; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #1D4ED8; }
+        .sizes { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TaskFlow Icon Generator</h1>
+        <p>Bu araç TaskFlow uygulaması için farklı boyutlarda ikonlar oluşturur.</p>
+        
+        <div class="icon-preview">
+            <div class="icon-item">
+                <h3>Master Icon (512x512)</h3>
+                <canvas id="masterIcon" class="icon-canvas" width="512" height="512"></canvas>
+                <br><button onclick="downloadIcon('masterIcon', 'taskflow-icon-512')">İndir</button>
+            </div>
+        </div>
+        
+        <h3>Android Icon Boyutları</h3>
+        <div class="sizes">
+            <div class="icon-item">
+                <h4>MDPI (48x48)</h4>
+                <canvas id="icon48" class="icon-canvas" width="48" height="48"></canvas>
+                <button onclick="downloadIcon('icon48', 'ic_launcher_48')">İndir</button>
+            </div>
+            <div class="icon-item">
+                <h4>HDPI (72x72)</h4>
+                <canvas id="icon72" class="icon-canvas" width="72" height="72"></canvas>
+                <button onclick="downloadIcon('icon72', 'ic_launcher_72')">İndir</button>
+            </div>
+            <div class="icon-item">
+                <h4>XHDPI (96x96)</h4>
+                <canvas id="icon96" class="icon-canvas" width="96" height="96"></canvas>
+                <button onclick="downloadIcon('icon96', 'ic_launcher_96')">İndir</button>
+            </div>
+            <div class="icon-item">
+                <h4>XXHDPI (144x144)</h4>
+                <canvas id="icon144" class="icon-canvas" width="144" height="144"></canvas>
+                <button onclick="downloadIcon('icon144', 'ic_launcher_144')">İndir</button>
+            </div>
+            <div class="icon-item">
+                <h4>XXXHDPI (192x192)</h4>
+                <canvas id="icon192" class="icon-canvas" width="192" height="192"></canvas>
+                <button onclick="downloadIcon('icon192', 'ic_launcher_192')">İndir</button>
+            </div>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+            <h4>Kurulum Talimatları:</h4>
+            <ol>
+                <li>Yukarıdaki ikonları indirin</li>
+                <li>Android ikon dosyalarını şu konumlara kopyalayın:
+                    <ul>
+                        <li><code>android/app/src/main/res/mipmap-mdpi/ic_launcher.png</code> (48x48)</li>
+                        <li><code>android/app/src/main/res/mipmap-hdpi/ic_launcher.png</code> (72x72)</li>
+                        <li><code>android/app/src/main/res/mipmap-xhdpi/ic_launcher.png</code> (96x96)</li>
+                        <li><code>android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png</code> (144x144)</li>
+                        <li><code>android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png</code> (192x192)</li>
+                    </ul>
+                </li>
+                <li>Round ikonlar için dosya adını <code>ic_launcher_round.png</code> yapın</li>
+                <li>Uygulamayı yeniden derleyin</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function drawIcon(canvas, size) {
+            const ctx = canvas.getContext('2d');
+            const scale = size / 512;
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, size, size);
+            
+            // Background gradient
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, '#3B82F6');
+            gradient.addColorStop(1, '#1D4ED8');
+            
+            // Rounded background
+            const radius = 90 * scale;
+            ctx.fillStyle = gradient;
+            roundRect(ctx, 0, 0, size, size, radius);
+            ctx.fill();
+            
+            // Task list items
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+            roundRect(ctx, 96 * scale, 128 * scale, 320 * scale, 40 * scale, 8 * scale);
+            ctx.fill();
+            
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+            roundRect(ctx, 96 * scale, 192 * scale, 240 * scale, 32 * scale, 6 * scale);
+            ctx.fill();
+            
+            roundRect(ctx, 96 * scale, 248 * scale, 280 * scale, 32 * scale, 6 * scale);
+            ctx.fill();
+            
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+            roundRect(ctx, 96 * scale, 304 * scale, 200 * scale, 32 * scale, 6 * scale);
+            ctx.fill();
+            
+            // Check mark (completed task)
+            const checkGradient = ctx.createLinearGradient(0, 0, size, size);
+            checkGradient.addColorStop(0, '#10B981');
+            checkGradient.addColorStop(1, '#059669');
+            
+            ctx.fillStyle = checkGradient;
+            ctx.beginPath();
+            ctx.arc(64 * scale, 148 * scale, 20 * scale, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Check mark symbol
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = 4 * scale;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            ctx.beginPath();
+            ctx.moveTo(56 * scale, 148 * scale);
+            ctx.lineTo(62 * scale, 154 * scale);
+            ctx.lineTo(72 * scale, 142 * scale);
+            ctx.stroke();
+            
+            // Empty checkboxes
+            const checkboxes = [208, 264, 320];
+            checkboxes.forEach(y => {
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.6)';
+                ctx.lineWidth = 2 * scale;
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+                ctx.beginPath();
+                ctx.arc(64 * scale, y * scale, 16 * scale, 0, 2 * Math.PI);
+                ctx.fill();
+                ctx.stroke();
+            });
+            
+            // TF logo
+            if (size >= 96) {
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.15)';
+                roundRect(ctx, 384 * scale, 384 * scale, 96 * scale, 96 * scale, 16 * scale);
+                ctx.fill();
+                
+                ctx.fillStyle = 'white';
+                ctx.font = `bold ${28 * scale}px Arial`;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText('TF', 432 * scale, 432 * scale);
+            }
+        }
+        
+        function roundRect(ctx, x, y, w, h, r) {
+            ctx.beginPath();
+            ctx.moveTo(x + r, y);
+            ctx.lineTo(x + w - r, y);
+            ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+            ctx.lineTo(x + w, y + h - r);
+            ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+            ctx.lineTo(x + r, y + h);
+            ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+            ctx.lineTo(x, y + r);
+            ctx.quadraticCurveTo(x, y, x + r, y);
+            ctx.closePath();
+        }
+        
+        function downloadIcon(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename + '.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+        
+        // Initialize all icons
+        window.onload = function() {
+            const sizes = [512, 48, 72, 96, 144, 192];
+            const canvasIds = ['masterIcon', 'icon48', 'icon72', 'icon96', 'icon144', 'icon192'];
+            
+            sizes.forEach((size, index) => {
+                const canvas = document.getElementById(canvasIds[index]);
+                drawIcon(canvas, size);
+            });
+        };
+    </script>
+</body>
+</html>
