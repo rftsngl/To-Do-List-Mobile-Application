@@ -315,8 +315,8 @@ export async function smokeTest(): Promise<void> {
       console.log(`[Smoke Test] ✓ İlk görevin alt görevleri: ${subtasks.length}`);
 
       if (subtasks.length > 0) {
-        const stats = await (SubtasksRepository as any).getTaskStats(allTasks[0].id);
-        console.log(`[Smoke Test] ✓ Alt görev istatistikleri: %${stats.completionRate} tamamlanma`);
+        const subtaskStats = await (SubtasksRepository as any).getTaskStats(allTasks[0].id);
+        console.log(`[Smoke Test] ✓ Alt görev istatistikleri: %${subtaskStats.completionRate} tamamlanma`);
       }
     }
 
