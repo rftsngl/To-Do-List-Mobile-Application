@@ -1,10 +1,101 @@
-# OSX
-#
-.DS_Store
+# ===========================
+# React Native Project
+# ===========================
 
-# Xcode
-#
-build/
+# Dependencies
+Application/node_modules/
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+*.tgz
+
+# Bundle Artifacts
+*.jsbundle
+*.bundle
+
+# Metro Bundler
+.metro/
+.metro-health-check*
+
+# ===========================
+# Build Outputs
+# ===========================
+
+# Android
+Application/android/app/build/
+Application/android/build/
+Application/android/.gradle/
+Application/android/.cxx/
+Application/android/app/.cxx/
+Application/android/local.properties
+Application/android/app/src/main/assets/index.android.bundle
+*.keystore
+!Application/android/app/debug.keystore
+
+# iOS
+Application/ios/build/
+Application/ios/DerivedData/
+Application/ios/Pods/
+*.ipa
+*.dSYM
+*.dSYM.zip
+
+# Compiled Output
+dist/
+out/
+*.apk
+*.aab
+
+# ===========================
+# IDE & Editors
+# ===========================
+
+# VS Code
+.vscode/
+
+# IntelliJ / Android Studio
+.idea/
+*.iml
+*.hprof
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ===========================
+# OS Files
+# ===========================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+ehthumbs.db
+Thumbs.db
+
+# ===========================
+# Native Platform
+# ===========================
+
+# Android
+Application/android/.gradle/
+Application/android/local.properties
+Application/android/.cxx/
+Application/android/.kotlin/
+*.keystore
+!Application/android/app/debug.keystore
+
+# iOS
+Application/ios/Pods/
+**/.xcode.env.local
+xcuserdata/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -13,66 +104,82 @@ build/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata
 *.xccheckout
 *.moved-aside
-DerivedData
-*.hmap
-*.ipa
 *.xcuserstate
-**/.xcode.env.local
+*.hmap
+DerivedData/
 
-# Android/IntelliJ
-#
-build/
-.idea
-.gradle
-local.properties
-*.iml
-*.hprof
-.cxx/
-*.keystore
-!debug.keystore
-.kotlin/
+# ===========================
+# Dependencies & Lock Files
+# ===========================
 
-# node.js
-#
-node_modules/
-npm-debug.log
-yarn-error.log
-package-lock.json
-yarn.lock
-*.tgz
+# Ruby / CocoaPods
+Application/ios/Pods/
+Application/vendor/bundle/
+Application/.bundle/
+Gemfile.lock
+Podfile.lock
 
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
-# screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/
+# ===========================
+# Temporary & Cache
+# ===========================
 
+# Logs
+*.log
+*.logs
+logs/
+
+# Cache
+.cache/
+.tmp/
+tmp/
+.eslintcache
+*.tsbuildinfo
+
+# Source Maps
+*.map
+*.js.map
+*.css.map
+
+# ===========================
+# Testing & Coverage
+# ===========================
+
+Application/coverage/
+Application/__tests__/coverage/
+
+# ===========================
+# Environment & Secrets
+# ===========================
+
+.env
+.env.local
+.env.development
+.env.production
+.env.staging
+*.pem
+*.p12
+*.mobileprovision
+
+# ===========================
+# CI/CD & Deployment
+# ===========================
+
+# Fastlane
 **/fastlane/report.xml
 **/fastlane/Preview.html
 **/fastlane/screenshots
 **/fastlane/test_output
 
-# Bundle artifact
-*.jsbundle
+# Expo (if used)
+.expo/
+.expo-shared/
 
-# Ruby / CocoaPods
-**/Pods/
-/vendor/bundle/
-.bundle/
-Gemfile.lock
-Podfile.lock
-
-# Temporary files created by Metro to check the health of the file watcher
-.metro-health-check*
-
-# testing
-/coverage
-
+# ===========================
 # Yarn
+# ===========================
+
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
@@ -80,74 +187,8 @@ Podfile.lock
 !.yarn/sdks
 !.yarn/versions
 
-# Environment files
-.env
-.env.local
-.env.development
-.env.production
-.env.staging
-
-# Logs
-*.log
-*.logs
-logs/
-
-# Cache directories
-.cache/
-.tmp/
-tmp/
-
-# IDE and Editor files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# React Native specific
-.expo/
-.expo-shared/
-
-# Additional Android build artifacts
-android/app/build/
-android/build/
-android/.gradle/
-android/app/src/main/assets/index.android.bundle
-
-# iOS build artifacts
-ios/build/
-ios/DerivedData/
-
+# ===========================
 # Flipper
+# ===========================
+
 Flipper-Podfile.lock
-
-# Additional temporary files
-.eslintcache
-*.tsbuildinfo
-
-# Generated source maps
-*.map
-*.js.map
-*.css.map
-
-# Metro bundler cache
-.metro/
-
-# Debug artifacts
-*.apk
-*.aab
-*.dSYM.zip
-*.dSYM
-
-# Compiled output
-dist/
-out/
